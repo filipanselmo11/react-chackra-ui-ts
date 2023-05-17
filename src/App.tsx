@@ -1,38 +1,34 @@
-import * as React from "react"
-import {
-  ChakraProvider,
-  Box,
-  Text,
-  Link,
-  VStack,
-  Code,
-  Grid,
-  theme,
-} from "@chakra-ui/react"
-import { ColorModeSwitcher } from "./ColorModeSwitcher"
-import { Logo } from "./Logo"
+import * as React from "react";
+// import {
+//   ChakraProvider,
+//   Box,
+//   Text,
+//   Link,
+//   VStack,
+//   Code,
+//   Grid,
+//   theme,
+// } from "@chakra-ui/react"
+// import { ColorModeSwitcher } from "./ColorModeSwitcher"
+// import { Logo } from "./Logo"
+import { AccordionComponent } from "./components/Accordion/AccordionComponent";
+import { TabsComponent } from "./components/Tabs/TabsComponent";
+import { Example1 } from "./components/VisuallyHidden/Example1";
+import { Example2 } from "./components/VisuallyHidden/Example2";
+import { Example3 } from "./components/VisuallyHidden/Example3";
+// import { DataTabsComponent } from "./components/Tabs/DataTabsComponent";
 
 export const App = () => (
-  <ChakraProvider theme={theme}>
-    <Box textAlign="center" fontSize="xl">
-      <Grid minH="100vh" p={3}>
-        <ColorModeSwitcher justifySelf="flex-end" />
-        <VStack spacing={8}>
-          <Logo h="40vmin" pointerEvents="none" />
-          <Text>
-            Edit <Code fontSize="xl">src/App.tsx</Code> and save to reload.
-          </Text>
-          <Link
-            color="teal.500"
-            href="https://chakra-ui.com"
-            fontSize="2xl"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn Chakra
-          </Link>
-        </VStack>
-      </Grid>
-    </Box>
-  </ChakraProvider>
-)
+  <div className="app">
+    <AccordionComponent />
+    <br />
+    <TabsComponent/>
+    <br/>
+    <Example1/>
+    <br/>
+    <Example2/>
+    <br/>
+    <Example3/>
+    {/* <DataTabsComponent/> */}
+  </div>
+);
