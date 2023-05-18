@@ -25,6 +25,9 @@ import { Size } from "./components/CircularProgress/Size";
 import { Thickness } from "./components/CircularProgress/Thickness";
 import { Label } from "./components/CircularProgress/Label";
 import { IndeterminateProgress } from "./components/CircularProgress/IndeterminateProgress";
+import { ProgressWithStripe } from "./components/Progress/ProgressWithStripe";
+import { ProgressSizes } from "./components/Progress/ProgressSizes";
+import { Animated } from "./components/Progress/Animated";
 // import { DataTabsComponent } from "./components/Tabs/DataTabsComponent";
 
 export const App = () => (
@@ -61,6 +64,13 @@ export const App = () => (
       <Label/>
       <br/>
       <IndeterminateProgress/>
+    </section>
+    <section id="progress">
+      <ProgressWithStripe/>
+      <br/>
+      {/* <ProgressSizes/> */}
+      <br/>
+      <Animated/>
     </section>
   </div>
 );
